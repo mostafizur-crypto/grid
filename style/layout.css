@@ -1,0 +1,60 @@
+.header , .nav, .main, .sidebar, .advertise, .footer{
+    background-color: coral;
+    border: 2px solid red;
+    padding: 5px;
+    border-radius: 7px;
+}
+.body{
+    display: grid;
+    gap: 5px;
+}
+.header{
+    grid-area: a;
+}
+
+.nav{
+    grid-area: b;
+}
+.main{
+    grid-area: c;
+}
+.sidebar{
+    grid-area: d;
+}
+
+.advertise{
+    grid-area: e;
+}
+.footer{
+    grid-area: f;
+}
+.body{
+    gap: 20px;
+    grid-template-areas: 
+    "a a a"
+    "b c d"
+    "b c e"
+    "f f f";
+}
+
+@media screen and (max-width: 576px){
+    .body{
+        grid-template-areas: 
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f";
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 800px){
+    .body{
+        grid-template-areas: 
+        "a a a"
+        "b b b"
+        "d c c"
+        "e f f";
+    }
+}
